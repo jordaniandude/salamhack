@@ -1,0 +1,184 @@
+:root {
+  --gery-color: #fafafa;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #fff;
+  font-family: "Noto Sans Arabic", serif;
+}
+
+.grid-areas-default {
+  grid-template-areas:
+    "a a b b c c"
+    ". d d e e .";
+}
+
+.max-width {
+  max-width: 1168px;
+}
+
+main {
+  margin-top: 50px;
+  padding-bottom: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  position: relative;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.bk-filter {
+  backdrop-filter: blur(4px);
+}
+
+.box {
+  border-radius: 15px;
+  background: var(--gery-color);
+}
+
+.date-block {
+  width: 80%;
+  background: var(--gery-color);
+  height: 112px;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  border-radius: 14px;
+}
+
+.prizes-block_single {
+  width: 320px;
+  height: 390px;
+  background: var(--gery-color);
+  position: relative;
+}
+
+.center-absolute {
+  left: 50%;
+  transform: translate(-50%);
+  position: absolute;
+}
+
+.box {
+  border-radius: 12px;
+  box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+}
+
+.flex-centered {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+section {
+  scroll-margin-top: 120px;
+}
+
+.gradient-text {
+  background: linear-gradient(96deg, #5c5cff -26.7%, #ff2aaa 127.19%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  padding: 20px 0;
+}
+
+.disabled {
+  background-color: #d3d3d3; /* Light gray */
+  cursor: not-allowed; /* Disabled cursor */
+}
+
+.disabled:hover::after {
+  content: attr(data-tooltip); /* Tooltip text from attribute */
+  position: absolute;
+  background-color: #333; /* Dark background */
+  color: #fff; /* White text */
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 12px;
+  white-space: nowrap;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  margin-top: -40px; /* Adjust based on your design */
+  transform: translateX(-50%);
+  left: 50%; /* Center the tooltip */
+}
+
+.tooltip-container {
+  position: relative; /* Ensures tooltip is positioned relative to this container */
+  display: inline-block;
+}
+
+@media (max-width: 1280px) {
+  .max-width {
+    max-width: 1000px;
+  }
+
+  .grid-areas-default {
+    grid-template-areas:
+      "a a b b c c"
+      ". d d e e .";
+  }
+
+  .svg-container {
+    top: 100px !important;
+  }
+}
+
+@media (max-width: 1024px) {
+  .max-width {
+    max-width: 700px;
+  }
+
+  .svg-container {
+    top: 40px !important;
+  }
+
+  .prizes-block_single {
+    height: 360px !important;
+  }
+
+  .grid-areas-default {
+    grid-template-areas:
+      "b a"
+      "c d"
+      "e .";
+  }
+}
+
+@media (max-width: 768px) {
+  .max-width {
+    max-width: 400px;
+    background-color: #fff;
+  }
+
+  .svg-container {
+    top: -30px !important;
+  }
+
+  .prizes-block_single {
+    height: 350px !important;
+  }
+
+  .grid-areas-default {
+    grid-template-areas:
+      "b"
+      "a"
+      "c"
+      "d"
+      "e";
+  }
+}

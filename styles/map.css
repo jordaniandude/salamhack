@@ -1,0 +1,77 @@
+svg#drawing-svg {
+  width: 100%;
+  transform: rotateX(65deg);
+  transform-origin: center;
+}
+
+.svg-container {
+  position: absolute;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 95px;
+  perspective: 1100px;
+
+  overflow: hidden;
+}
+
+@keyframes pathAnimation {
+  0% {
+    opacity: 0;
+    transform: translateY(8px);
+    animation-timing-function: ease-out;
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(-5px);
+    animation-timing-function: ease-in;
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+.init-animate {
+  opacity: 0;
+  animation: pathAnimation 0.4s forwards;
+}
+
+.hidden-path {
+  fill: none !important;
+}
+
+.cir-location {
+  fill: none;
+  stroke-width: 1px;
+  fill: rgb(1, 255, 192);
+  filter: url("#neon");
+  opacity: 0;
+  animation: opacityAnimation 1s linear forwards;
+  animation-delay: 1s;
+}
+
+@keyframes trace {
+  from {
+    stroke-dashoffset: 0;
+  }
+  to {
+    stroke-dashoffset: 100;
+  }
+}
+
+@keyframes opacityAnimation {
+  to {
+    opacity: 1;
+  }
+}
+
+.rounding-cirlce {
+  fill: #5c5cff;
+  animation: opacityAnimation 1s linear forwards;
+  animation-delay: 1s;
+  filter: url("#neon");
+  opacity: 0;
+}
