@@ -19,191 +19,203 @@
   </head>
   <body class="m-auto p-0 max-width">
     <header
-      class="bk-filter px-5 md:px-4 lg:px-4 w-[380px] md:w-[750px] lg:w-[990px] h-[54px] md:h-[64px] left-1/2 -translate-x-1/2 top-5 bg-black/5 fixed z-10 rounded-full flex justify-between items-center"
+      class="fixed top-5 left-1/2 -translate-x-1/2 z-10 flex items-center gap-3 md:gap-4 w-[95%] max-w-[1100px]"
     >
-      <div class="flex items-center gap-2 items-center h-full">
-        <button
-          id="menu-toggle"
-          class="lg:hidden relative transition-all p-2 rounded-full"
-        >
-          <svg fill="none" viewBox="0 0 20 20" width="20" height="20">
-            <path
-              stroke="currentColor"
-              d="M17.49 9.998H2.5M17.49 15H2.5m15-10h-15"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="1.25"
-            ></path>
-          </svg>
-
-          <div
-            id="menu"
-            class="hidden bg-white shadow-lg rounded-lg p-4 absolute top-9 right-2 w-[200px]"
+      <!-- Logo - standalone on the right of menu (RTL) -->
+      <a href="index.html" class="shrink-0 flex items-center">
+        <img src="img/Logo22.png" alt="Salam Hack" class="w-24 md:w-28 lg:w-32 h-auto" />
+      </a>
+      <!-- Menu pill (logo excluded) -->
+      <nav
+        class="bk-filter px-4 lg:px-5 flex-1 min-w-0 h-[54px] md:h-[64px] bg-black/5 rounded-full flex justify-between items-center"
+      >
+        <div class="flex items-center gap-2 h-full shrink-0">
+          <button
+            id="menu-toggle"
+            class="lg:hidden relative transition-all p-2 rounded-full z-20"
+            aria-label="فتح القائمة"
           >
-            <!-- Menu content here -->
-            <div class="relative menu-item">
-              <a
-                href="#prizes"
-                class="xl:hover:bg-black/10 transition-all rounded-full inline-flex w-full justify-center gap-x-1.5 px-3 py-2"
-              >
-                الجوائز
-              </a>
-            </div>
+            <svg fill="none" viewBox="0 0 20 20" width="20" height="20">
+              <path
+                stroke="currentColor"
+                d="M17.49 9.998H2.5M17.49 15H2.5m15-10h-15"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="1.25"
+              ></path>
+            </svg>
 
-            <div class="relative menu-item">
-              <a
-                href="#rules"
-                class="xl:hover:bg-black/10 transition-all rounded-full inline-flex w-full justify-center gap-x-1.5 py-2 px-3"
-              >
-                شروط الإشتراك
-              </a>
+            <div
+              id="menu"
+              class="hidden bg-white shadow-lg rounded-lg p-4 absolute top-9 right-2 w-[200px] z-50"
+            >
+              <div class="relative menu-item">
+                <a
+                  href="past-years.html"
+                  class="xl:hover:bg-black/10 transition-all rounded-full inline-flex w-full justify-center gap-x-1.5 px-3 py-2"
+                >
+                  النسخ السابقة
+                </a>
+              </div>
+              <div class="relative menu-item">
+                <a
+                  href="#prizes"
+                  class="xl:hover:bg-black/10 transition-all rounded-full inline-flex w-full justify-center gap-x-1.5 px-3 py-2"
+                >
+                  الجوائز
+                </a>
+              </div>
+              <div class="relative menu-item">
+                <a
+                  href="#rules"
+                  class="xl:hover:bg-black/10 transition-all rounded-full inline-flex w-full justify-center gap-x-1.5 py-2 px-3"
+                >
+                  شروط الإشتراك
+                </a>
+              </div>
+              <div class="relative menu-item">
+                <a
+                  href="#before-hackathon"
+                  class="xl:hover:bg-black/10 transition-all rounded-full inline-flex w-full justify-center gap-x-1.5 py-2 px-3"
+                >
+                  قبل الهاكاثون
+                </a>
+              </div>
+              <div class="relative menu-item">
+                <a
+                  href="#in-hackathon"
+                  class="xl:hover:bg-black/10 transition-all rounded-full inline-flex w-full justify-center gap-x-1.5 py-2 px-3"
+                >
+                  خلال الهاكاثون
+                </a>
+              </div>
+              <div class="relative menu-item">
+                <a
+                  href="#after-hackathon"
+                  class="xl:hover:bg-black/10 transition-all rounded-full inline-flex w-full justify-center gap-x-1.5 py-2 px-3"
+                >
+                  بعد الهاكاثون
+                </a>
+              </div>
+              <div class="relative menu-item">
+                <a
+                  href="#criteria"
+                  class="xl:hover:bg-black/10 transition-all rounded-full inline-flex w-full justify-center gap-x-1.5 py-2 px-3"
+                >
+                  معايير الفوز
+                </a>
+              </div>
+              <div class="relative menu-item">
+                <a
+                  href="#jury"
+                  class="xl:hover:bg-black/10 transition-all rounded-full inline-flex w-full justify-center gap-x-1.5 py-2 px-3"
+                >
+                  لجنة التحكيم
+                </a>
+              </div>
+              <div class="relative menu-item">
+                <a
+                  href="#fq"
+                  class="xl:hover:bg-black/10 transition-all rounded-full inline-flex w-full justify-center gap-x-1.5 py-2 px-3"
+                >
+                  الاسئلة الشائعة
+                </a>
+              </div>
+              <div class="relative menu-item">
+                <a
+                  href="#sponsors"
+                  class="xl:hover:bg-black/10 transition-all rounded-full inline-flex w-full justify-center gap-x-1.5 py-2 px-3"
+                >
+                  الرعاة
+                </a>
+              </div>
             </div>
-            <div class="relative menu-item">
-              <a
-                href="#before-hackathon"
-                class="xl:hover:bg-black/10 transition-all rounded-full inline-flex w-full justify-center gap-x-1.5 py-2 px-3"
-              >
-                قبل الهاكاثون
-              </a>
-            </div>
-            <div class="relative menu-item">
-              <a
-                href="#in-hackathon"
-                class="xl:hover:bg-black/10 transition-all rounded-full inline-flex w-full justify-center gap-x-1.5 py-2 px-3"
-              >
-                خلال الهاكاثون
-              </a>
-            </div>
-            <div class="relative menu-item">
-              <a
-                href="#after-hackathon"
-                class="xl:hover:bg-black/10 transition-all rounded-full inline-flex w-full justify-center gap-x-1.5 py-2 px-3"
-              >
-                بعد الهاكاثون
-              </a>
-            </div>
-            <div class="relative menu-item">
-              <a
-                href="#criteria"
-                class="xl:hover:bg-black/10 transition-all rounded-full inline-flex w-full justify-center gap-x-1.5 py-2 px-3"
-              >
-                معايير الفوز
-              </a>
-            </div>
-            <div class="relative menu-item">
-              <a
-                href="#jury"
-                class="xl:hover:bg-black/10 transition-all rounded-full inline-flex w-full justify-center gap-x-1.5 py-2 px-3"
-              >
-                لجنة التحكيم
-              </a>
-            </div>
+          </button>
+        </div>
 
-            <div class="relative menu-item">
-              <a
-                href="#fq"
-                class="xl:hover:bg-black/10 transition-all rounded-full inline-flex w-full justify-center gap-x-1.5 py-2 px-3"
-              >
-                الاسئلة الشائعة
-              </a>
-            </div>
-            <div class="relative menu-item">
-              <a
-                href="#sponsors"
-                class="xl:hover:bg-black/10 transition-all rounded-full inline-flex w-full justify-center gap-x-1.5 py-2 px-3"
-              >
-                الرعاة</a
-              >
-            </div>
-          </div>
-        </button>
-
-        <img src="img/Logo22.png" alt="logo" class="w-20 lg:w-28" />
-      </div>
-
-      <div class="flex items-center hidden lg:flex">
-        <div class="relative">
+        <div class="flex items-center hidden lg:flex flex-1 min-w-0 gap-1 overflow-x-auto [scrollbar-width:thin]">
+        <div class="relative shrink-0">
+          <a
+            href="past-years.html"
+            class="xl:hover:bg-black/10 transition-all rounded-full inline-flex justify-center gap-x-1.5 px-2 py-2 text-sm whitespace-nowrap"
+          >
+            النسخ السابقة
+          </a>
+        </div>
+        <div class="relative shrink-0">
           <a
             href="#prizes"
-            class="xl:hover:bg-black/10 transition-all rounded-full inline-flex w-full justify-center gap-x-1.5 px-3 py-2 text-xs md:text-sm"
+            class="xl:hover:bg-black/10 transition-all rounded-full inline-flex justify-center gap-x-1.5 px-2 py-2 text-sm whitespace-nowrap"
           >
             الجوائز
           </a>
         </div>
-
-        <div class="relative">
+        <div class="relative shrink-0">
           <a
             href="#rules"
-            class="xl:hover:bg-black/10 transition-all rounded-full inline-flex w-full justify-center gap-x-1.5 py-2 text-xs md:text-sm px-3"
+            class="xl:hover:bg-black/10 transition-all rounded-full inline-flex justify-center gap-x-1.5 py-2 px-2 text-sm whitespace-nowrap"
           >
             شروط الإشتراك
           </a>
         </div>
-        <div class="relative">
+        <div class="relative shrink-0">
           <a
             href="#before-hackathon"
-            class="xl:hover:bg-black/10 transition-all rounded-full inline-flex w-full justify-center gap-x-1.5 py-2 text-xs md:text-sm px-3"
+            class="xl:hover:bg-black/10 transition-all rounded-full inline-flex justify-center gap-x-1.5 py-2 px-2 text-sm whitespace-nowrap"
           >
             قبل الهاكاثون
           </a>
         </div>
-        <div class="relative">
+        <div class="relative shrink-0">
           <a
             href="#in-hackathon"
-            class="xl:hover:bg-black/10 transition-all rounded-full inline-flex w-full justify-center gap-x-1.5 py-2 text-xs md:text-sm px-3"
+            class="xl:hover:bg-black/10 transition-all rounded-full inline-flex justify-center gap-x-1.5 py-2 px-2 text-sm whitespace-nowrap"
           >
             خلال الهاكاثون
           </a>
         </div>
-        <div class="relative">
+        <div class="relative shrink-0">
           <a
             href="#after-hackathon"
-            class="xl:hover:bg-black/10 transition-all rounded-full inline-flex w-full justify-center gap-x-1.5 py-2 text-xs md:text-sm px-3"
+            class="xl:hover:bg-black/10 transition-all rounded-full inline-flex justify-center gap-x-1.5 py-2 px-2 text-sm whitespace-nowrap"
           >
             بعد الهاكاثون
           </a>
         </div>
-        <div class="relative">
+        <div class="relative shrink-0">
           <a
             href="#criteria"
-            class="xl:hover:bg-black/10 transition-all rounded-full inline-flex w-full justify-center gap-x-1.5 py-2 text-xs md:text-sm px-3"
+            class="xl:hover:bg-black/10 transition-all rounded-full inline-flex justify-center gap-x-1.5 py-2 px-2 text-sm whitespace-nowrap"
           >
             معايير الفوز
           </a>
         </div>
-        <div class="relative">
+        <div class="relative shrink-0">
           <a
             href="#jury"
-            class="xl:hover:bg-black/10 transition-all rounded-full inline-flex w-full justify-center gap-x-1.5 py-2 text-xs md:text-sm px-3"
+            class="xl:hover:bg-black/10 transition-all rounded-full inline-flex justify-center gap-x-1.5 py-2 px-2 text-sm whitespace-nowrap"
           >
             لجنة التحكيم
           </a>
         </div>
-
-        <div class="relative menu-item">
+        <div class="relative shrink-0 menu-item">
           <a
             href="#sponsors"
-            class="xl:hover:bg-black/10 transition-all rounded-full inline-flex w-full justify-center gap-x-1.5 py-2 text-xs md:text-sm px-3"
+            class="xl:hover:bg-black/10 transition-all rounded-full inline-flex justify-center gap-x-1.5 py-2 px-2 text-sm whitespace-nowrap"
           >
-            الرعاة</a
-          >
+            الرعاة
+          </a>
         </div>
-
-        <div class="relative menu-item">
+        <div class="relative shrink-0 menu-item">
           <a
             href="#fq"
-            class="xl:hover:bg-black/10 transition-all rounded-full inline-flex w-full justify-center gap-x-1.5 py-2 text-xs md:text-sm px-3"
+            class="xl:hover:bg-black/10 transition-all rounded-full inline-flex justify-center gap-x-1.5 py-2 px-2 text-sm whitespace-nowrap"
           >
             الاسئلة الشائعة
           </a>
         </div>
       </div>
-
-      <!-- <a href="https://forms.gle/Seb5sY9vdwr99mpXA" class="lg:hidden" target="_blank">
-        <p class="bg-black text-white py-2 px-4 rounded-3xl font-[400] text-sm">
-          سجل الآن
-        </p>
-      </a> -->
+      </nav>
     </header>
     <main>
       <!-- MAP  -->
@@ -858,7 +870,7 @@
           <h1
             class="text-3xl gradient-text md:text-4xl lg:text-6xl xl:text-7xl black text-center font-medium"
           >
-          سلام هاك ٢٠٢٥
+          سلام هاك ٢٠٢٦
           </h1>
         </div>
 
@@ -871,7 +883,7 @@
           <p class="text-xl md:text-2xl font-[600]">موضوع الهاكاثون | Hackathon Theme</p>
 
             <p class="md:text-lg md:px-9 lg:px-32">
-              انضم إلينا في سلام هاك لهذا العام لاستكشاف قوة الذكاء الاصطناعي التوليدي (Generative AI)! 🚀💡 التحدي بسيط: قم ببناء تطبيق أو منتج يستخدم الذكاء الاصطناعي التوليدي بشكل مبتكر، وفكر خارج الصندوق لإنشاء حلول عملية أو تجارب مذهلة.! 💻🏆
+              قريبا
             </p>
           </div>
 
@@ -888,63 +900,10 @@
 
           <div class="flex items-center gap-2 mt-6 md:mt-10">
             <img src="icons/date.svg" alt="date" class="w-7" />
-            <p class="text-lg font-[600]">من ١٣ إلى ٢٠ مارس ٢٠٢٥</p>
+            <p class="text-lg font-[600]">٢٠٢٦ | قريبا</p>
           </div>
         </div>
       </section>
-
-      <!-- PRIZES  -->
-      <section
-      class="mt-32 md:mt-36 w-full flex flex-col items-center"
-      id="before-hackathon"
-    >
-      <h2 class="text-center font-medium text-[40px]">الفائزين</h2>
-      <div
-        class="w-[250px] md:w-[500px] lg:w-[700px] h-[1.5px] bg-black/20 relative mt-7 mb-14"
-      ></div>
-
-      <div class="px-4 md:px-0 md:w-[60%] flex flex-col gap-4">
-        <div class="flex items-center gap-4">
-          <p>1. <a style="color:blue;" href="https://youtu.be/MC-cjBK9b3I" target="_blank">Quantum Quests</a> </p>
-        </div>
-
-        <div class="flex items-center gap-4">
-          <p>2. <a style="color:blue;" href="https://drive.google.com/file/d/1vSVV6AivtjgKawaLfFPCr1XXNbxFThez/view?usp=sharing" target="_blank">algorithmic avengers</a> </p>
-        </div>
-
-        <div class="flex items-center gap-4">
-          <p>3. <a style="color:blue;" href="https://drive.google.com/file/d/1BKtdl7bQnv83m-odvfU3sucnmVb0tCTt/view?usp=sharing" target="_blank">أَلِف</a> </p>
-        </div>
-
-        <div class="flex items-center gap-4">
-          <p>4. <a style="color:blue;" href="https://www.youtube.com/watch?v=avQUMzR4LOc" target="_blank">شلابقScript</a> </p>
-        </div>
-
-        <div class="flex items-center gap-4">
-          <p>5. <a style="color:blue;" href="https://youtu.be/MEu6MXaGigU" target="_blank">forgoodlife</a> </p>
-        </div>
-
-        <div class="flex items-center gap-4">
-          <p>6. <a style="color:blue;" href="https://drive.google.com/file/d/1ekMukkeeMrWbJqlArX9ZT14jaqf66s8q/view?usp=sharing" target="_blank">المغامرون الخمسة</a> </p>
-        </div>
-
-        <div class="flex items-center gap-4">
-          <p>7. <a style="color:blue;" href="https://youtu.be/SijGUihGlHw" target="_blank">ArammTech | أرام تيك</a> </p>
-        </div>
-
-        <div class="flex items-center gap-4">
-          <p>8. <a style="color:blue;" href="https://youtu.be/geYo1zguH80" target="_blank">code-i5</a> </p>
-        </div>
-
-        <div class="flex items-center gap-4">
-          <p>9. <a style="color:blue;" href="https://drive.google.com/file/d/1GcAkUg8w_D-3L6Qg-eDOrCeURIK3K2lI/view?usp=sharing" target="_blank">Tech Titans</a> </p>
-        </div>
-
-        <div class="flex items-center gap-4">
-          <p>10. <a style="color:blue;" href="https://www.youtube.com/watch?v=XWGo3-UUBq0" target="_blank">HSA</a> </p>
-        </div>
-      </div>
-    </section>
 
       <!-- PRIZES  -->
       <section class="w-full lg:px-20 mt-32 px-4" id="prizes">
@@ -960,44 +919,44 @@
             />
             <div class="ps-7 bottom-6 absolute">
               <p class="text-lg md:text-lg font-medium" style="color: #e8b04b">
-                المركز الأول
+                الفائز الأول
               </p>
               <p class="text-2xl md:text-3xl lg:text-4xl font-bold md:mt-2">
-                1500 دولار
+                900 دولار
               </p>
             </div>
           </div>
 
           <div class="prizes-block_single box relative">
             <img
-              src="icons/medal-silver.svg"
+              src="icons/medal-gold.svg"
               class="w-3/4 center-absolute top-6"
               alt="silver-prize"
             />
 
             <div class="ps-7 bottom-6 absolute">
-              <p class="text-lg md:text-lg font-medium" style="color: #bcbcbc">
-                المركز الثاني
+              <p class="text-lg md:text-lg font-medium" style="color: #e8b04b">
+                الفائز الثاني
               </p>
               <p class="text-2xl md:text-3xl lg:text-4xl font-bold md:mt-2">
-                1000 دولار
+                900 دولار
               </p>
             </div>
           </div>
 
           <div class="prizes-block_single box relative">
             <img
-              src="icons/medal-bronze.svg"
+              src="icons/medal-gold.svg"
               class="w-3/4 center-absolute top-6"
               alt="bronze-prize"
             />
 
             <div class="ps-7 bottom-6 absolute">
-              <p class="text-lg md:text-lg font-medium" style="color: #c19a6b">
-                المركز الثالث
+              <p class="text-lg md:text-lg font-medium" style="color: #e8b04b">
+                الفائز الثالث
               </p>
               <p class="text-2xl md:text-3xl lg:text-4xl font-bold md:mt-2">
-                500 دولار
+                900 دولار
               </p>
             </div>
           </div>
