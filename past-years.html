@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>النسخ السابقة | سلام هاك</title>
+    <link rel="stylesheet" href="/styles/main.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="icon" type="image/x-icon" href="/img/fav-img.png" />
+    <style>
+      .year-card {
+        transition: all 0.3s ease;
+      }
+      .year-card:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      }
+      .winners-content {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.4s ease;
+      }
+      .winners-content.expanded {
+        max-height: 2000px;
+      }
+      .year-toggle::after {
+        content: "▼";
+        font-size: 0.75rem;
+        transition: transform 0.3s ease;
+        margin-right: 0.5rem;
+      }
+      .year-toggle.expanded::after {
+        transform: rotate(180deg);
+      }
+    </style>
+  </head>
+  <body class="m-auto p-0 max-width">
+    <header
+      class="fixed top-5 left-1/2 -translate-x-1/2 z-10 flex items-center gap-3 md:gap-4 w-[95%] max-w-[1100px]"
+    >
+      <!-- Logo - standalone on the right of menu (RTL) -->
+      <a href="index.html" class="shrink-0 flex items-center">
+        <img src="img/Logo22.png" alt="Salam Hack" class="w-24 md:w-28 lg:w-32 h-auto" />
+      </a>
+      <!-- Menu pill (logo excluded) -->
+      <nav
+        class="bk-filter px-4 lg:px-5 flex-1 min-w-0 h-[54px] md:h-[64px] bg-black/5 rounded-full flex justify-between items-center"
+      >
+        <div class="flex items-center gap-2 h-full shrink-0">
+          <button
+            id="menu-toggle"
+            class="lg:hidden relative transition-all p-2 rounded-full z-20"
+            aria-label="فتح القائمة"
+          >
+            <svg fill="none" viewBox="0 0 20 20" width="20" height="20">
+              <path
+                stroke="currentColor"
+                d="M17.49 9.998H2.5M17.49 15H2.5m15-10h-15"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="1.25"
+              ></path>
+            </svg>
+            <div
+              id="menu"
+              class="hidden bg-white shadow-lg rounded-lg p-4 absolute top-9 right-2 w-[200px] z-50"
+            >
+              <div class="relative menu-item">
+                <a
+                  href="index.html"
+                  class="xl:hover:bg-black/10 transition-all rounded-full inline-flex w-full justify-center gap-x-1.5 px-3 py-2"
+                >
+                  الرئيسية
+                </a>
+              </div>
+              <div class="relative menu-item">
+                <a
+                  href="past-years.html"
+                  class="xl:hover:bg-black/10 transition-all rounded-full inline-flex w-full justify-center gap-x-1.5 px-3 py-2"
+                >
+                  النسخ السابقة
+                </a>
+              </div>
+            </div>
+          </button>
+        </div>
+
+        <div class="flex items-center hidden lg:flex flex-1 min-w-0 gap-1 overflow-x-auto [scrollbar-width:thin]">
+          <div class="relative shrink-0">
+            <a
+              href="index.html"
+              class="xl:hover:bg-black/10 transition-all rounded-full inline-flex justify-center gap-x-1.5 px-2 py-2 text-sm whitespace-nowrap"
+            >
+              الرئيسية
+            </a>
+          </div>
+          <div class="relative shrink-0">
+            <a
+              href="past-years.html"
+              class="xl:hover:bg-black/10 transition-all rounded-full inline-flex justify-center gap-x-1.5 px-2 py-2 text-sm whitespace-nowrap"
+            >
+              النسخ السابقة
+            </a>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="mt-32 md:mt-36 w-full flex flex-col items-center px-4">
+        <h1 class="text-center font-medium text-[40px]">النسخ السابقة</h1>
+        <div
+          class="w-[250px] md:w-[500px] lg:w-[700px] h-[1.5px] bg-black/20 relative mt-7 mb-14"
+        ></div>
+
+        <div class="w-full max-w-2xl flex flex-col gap-4">
+          <!-- 2025 -->
+          <div class="year-card box overflow-hidden">
+            <button
+              class="year-toggle w-full text-right py-5 px-6 flex items-center justify-between text-xl font-medium"
+              data-year="2025"
+            >
+              <span>هاكاثون ٢٠٢٥</span>
+            </button>
+            <div class="winners-content" id="winners-2025">
+              <div class="px-6 pb-6 pt-2 border-t border-black/10">
+                <div class="flex flex-col gap-4 mt-4">
+                  <div class="flex items-center gap-4">
+                    <p>1. <a class="text-blue-600 hover:underline" href="https://youtu.be/MC-cjBK9b3I" target="_blank">Quantum Quests</a></p>
+                  </div>
+                  <div class="flex items-center gap-4">
+                    <p>2. <a class="text-blue-600 hover:underline" href="https://drive.google.com/file/d/1vSVV6AivtjgKawaLfFPCr1XXNbxFThez/view?usp=sharing" target="_blank">algorithmic avengers</a></p>
+                  </div>
+                  <div class="flex items-center gap-4">
+                    <p>3. <a class="text-blue-600 hover:underline" href="https://drive.google.com/file/d/1BKtdl7bQnv83m-odvfU3sucnmVb0tCTt/view?usp=sharing" target="_blank">أَلِف</a></p>
+                  </div>
+                  <div class="flex items-center gap-4">
+                    <p>4. <a class="text-blue-600 hover:underline" href="https://www.youtube.com/watch?v=avQUMzR4LOc" target="_blank">شلابقScript</a></p>
+                  </div>
+                  <div class="flex items-center gap-4">
+                    <p>5. <a class="text-blue-600 hover:underline" href="https://youtu.be/MEu6MXaGigU" target="_blank">forgoodlife</a></p>
+                  </div>
+                  <div class="flex items-center gap-4">
+                    <p>6. <a class="text-blue-600 hover:underline" href="https://drive.google.com/file/d/1ekMukkeeMrWbJqlArX9ZT14jaqf66s8q/view?usp=sharing" target="_blank">المغامرون الخمسة</a></p>
+                  </div>
+                  <div class="flex items-center gap-4">
+                    <p>7. <a class="text-blue-600 hover:underline" href="https://youtu.be/SijGUihGlHw" target="_blank">ArammTech | أرام تيك</a></p>
+                  </div>
+                  <div class="flex items-center gap-4">
+                    <p>8. <a class="text-blue-600 hover:underline" href="https://youtu.be/geYo1zguH80" target="_blank">code-i5</a></p>
+                  </div>
+                  <div class="flex items-center gap-4">
+                    <p>9. <a class="text-blue-600 hover:underline" href="https://drive.google.com/file/d/1GcAkUg8w_D-3L6Qg-eDOrCeURIK3K2lI/view?usp=sharing" target="_blank">Tech Titans</a></p>
+                  </div>
+                  <div class="flex items-center gap-4">
+                    <p>10. <a class="text-blue-600 hover:underline" href="https://www.youtube.com/watch?v=XWGo3-UUBq0" target="_blank">HSA</a></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 2024 -->
+          <div class="year-card box overflow-hidden">
+            <button
+              class="year-toggle w-full text-right py-5 px-6 flex items-center justify-between text-xl font-medium"
+              data-year="2024"
+            >
+              <span>هاكاثون ٢٠٢٤</span>
+            </button>
+            <div class="winners-content" id="winners-2024">
+              <div class="px-6 pb-6 pt-2 border-t border-black/10">
+                <p class="text-black/70 text-sm mt-2 mb-4">
+                  مصدر:
+                  <a class="text-blue-600 hover:underline" href="https://www.aased.org/%D8%A7%D9%84%D9%85%D8%B3%D8%A7%D8%A8%D9%82%D8%A7%D8%AA/%D9%87%D8%A7%D9%83%D8%A7%D8%AB%D9%88%D9%86-%D8%B1%D9%85%D8%B6%D8%A7%D9%86-%D9%A1%D9%A4%D9%A4%D9%A5" target="_blank" rel="noopener">هاكاثون رمضان ١٤٤٥ – الجمعية العربية الأمريكية للتعليم والتطوير</a>
+                </p>
+                <div class="flex flex-col gap-4 mt-4">
+                  <div class="flex items-center gap-4">
+                    <p>1. <a class="text-blue-600 hover:underline font-medium" href="https://youtu.be/7VY-7vO9cAI" target="_blank" rel="noopener">كيدوكود | KidoCode</a> — المركز الأول</p>
+                  </div>
+                  <div class="flex items-center gap-4">
+                    <p>2. <a class="text-blue-600 hover:underline font-medium" href="https://www.youtube.com/watch?v=rnJ6ETh-0Uc" target="_blank" rel="noopener">RBS Team</a> — المركز الثاني</p>
+                  </div>
+                  <div class="flex items-center gap-4">
+                    <p>3. <a class="text-blue-600 hover:underline font-medium" href="https://youtu.be/N-cN70BssRY" target="_blank" rel="noopener">Team Sehtie</a> — المركز الثالث</p>
+                  </div>
+                  <div class="flex items-center gap-4">
+                    <p>4. <a class="text-blue-600 hover:underline" href="https://drive.google.com/file/d/1_3oYYMLpKLWKGp-xn1EQYCKqsMB5srEV/view" target="_blank" rel="noopener">فريق مشروع تطبيق طبيبي</a></p>
+                  </div>
+                  <div class="flex items-center gap-4">
+                    <p>5. <a class="text-blue-600 hover:underline" href="https://youtu.be/6pLpqUiHHUA?si=10wypqCbuWVK4Jba" target="_blank" rel="noopener">فريق الراوي الذكي</a></p>
+                  </div>
+                  <div class="flex items-center gap-4">
+                    <p>6. <a class="text-blue-600 hover:underline" href="https://youtu.be/Z_mrpm7vvnc?si=19KKwmkJ1aRf3nBZ" target="_blank" rel="noopener">Sandstorm</a></p>
+                  </div>
+                  <div class="flex items-center gap-4">
+                    <p>7. <a class="text-blue-600 hover:underline" href="https://drive.google.com/file/d/1Xzu-_MhLANW7y9AaFUjcef7AAfmOWZpK/view?usp=drive_link" target="_blank" rel="noopener">edu kids</a></p>
+                  </div>
+                  <div class="flex items-center gap-4">
+                    <p>8. <a class="text-blue-600 hover:underline" href="https://www.youtube.com/watch?v=1_oEhbtyI4Y" target="_blank" rel="noopener">فريق عضد</a></p>
+                  </div>
+                  <div class="flex items-center gap-4">
+                    <p>9. <a class="text-blue-600 hover:underline" href="https://youtu.be/y1JCW3sn39c" target="_blank" rel="noopener">المطورون الرقميون الإبداعيون</a></p>
+                  </div>
+                  <div class="flex items-center gap-4">
+                    <p>10. <a class="text-blue-600 hover:underline" href="https://youtu.be/B-8Wh9scZTk" target="_blank" rel="noopener">انا هون</a></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="w-full">
+      <div
+        class="w-full absolute h-[1px] bg-black/40 left-1/2 -translate-x-1/2 -translate-y-12"
+      ></div>
+      <div class="flex gap-4 md:gap-3 md:grid grid-cols-5 mb-12 mt-20">
+        <div
+          class="flex flex-col items-start justify-start w-32 gap-2 col-span-3"
+        >
+          <div class="flex items-center justify-center w-full">
+            <img src="img/Logo22.png" alt="main-logo" class="w-24 md:w-32" />
+          </div>
+
+          <div class="flex items-center justify-center gap-2 w-full mt-2">
+            <a
+              href="https://www.linkedin.com/in/tariqelouzeh/"
+              target="_blank"
+            >
+              <img
+                src="icons/linkedin-icon.svg"
+                class="w-8 h-8"
+                alt="linkedin"
+              />
+            </a>
+          </div>
+        </div>
+
+        <!-- JURY  -->
+        <div class="flex flex-col gap-2 text-xs md:text-sm text-gray-600">
+          <p class="font-medium text-black">ندوات سلام هاك ٢٠٢٥</p>
+          <a target="_blank" href="https://youtu.be/eCJJ_mj1ipE">
+            <p class="hover:text-black transition-all">الندوة الافتتاحية | طارق العوزة</p>
+          </a>
+
+          <a target="_blank" href="https://youtu.be/wONIUt8172o">
+            <p class="hover:text-black transition-all">ما هو ال MVP | فادي الجبالي</p>
+          </a>
+
+          <a target="_blank" href="https://youtu.be/V6e6j2RwXiQ">
+            <p class="hover:text-black transition-all">مستقبل البرمجة في العالم العربي | د. محمد أبو هدهود</p>
+          </a>
+
+          <a target="_blank" href="https://youtu.be/Ou87C65TUis">
+            <p class="hover:text-black transition-all">اختار فكرتك بذكاء | أحمد حطاب</p>
+          </a>
+        </div>
+
+        <!-- WEBINARS  -->
+        <div class="flex flex-col gap-2 text-xs md:text-sm text-gray-600">
+          <p class="font-medium text-black">الندوات السابقة</p>
+          <a target="_blank" href="https://www.youtube.com/watch?v=_NhNTFO5NWQ">
+            <p class="hover:text-black transition-all">
+              مرحبا بكم في هاكاثون ٢٠٢٤ | طارق العوزة
+            </p>
+          </a>
+
+          <a target="_blank" href="https://www.youtube.com/watch?v=CmcisCmz4p0">
+            <p class="hover:text-black transition-all">
+              تطوير الفكرة | محمد دغامين
+            </p>
+          </a>
+
+          <a target="_blank" href="https://www.youtube.com/watch?v=x0LwSL43R2c">
+            <p class="hover:text-black transition-all">
+              العرض التقديمي | محمد دغامين
+            </p>
+          </a>
+
+          <a target="_blank" href="https://www.youtube.com/watch?v=6oXJT5pj8mQ">
+            <p class="hover:text-black transition-all">إدارة المنتج | أحمد عباس</p>
+          </a>
+
+          <a target="_blank" href="https://www.youtube.com/watch?v=LsuOGiC9V4k">
+            <p class="hover:text-black transition-all">كيف تبيع منتجك؟ | سلطان الكيلاني</p>
+          </a>
+        </div>
+      </div>
+
+      <div
+        class="absolute left-1/2 w-full -translate-x-1/2 flex items-center justify-center h-32 bg-[#e6e8e7] text-xs"
+      >
+        <div
+          class="max-width bg-[#e6e8e7] text-[10px] md:text-sm flex flex-col gap-1 items-center w-full justify-between"
+        >
+          <p>
+            كل الحقوق محفوظة © سلام هاك ٢٠٢٥
+          </p>
+
+          <p class="text-[10px] text-black/70 absolute bottom-2 left-2">
+            Created with ❤️ by
+            <a
+              href="https://www.alaadev.com"
+              target="_blank"
+              class="text-black font-medium"
+            >
+              &nbsp;Alaa Alaff
+            </a>
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+      document.querySelectorAll(".year-toggle").forEach((btn) => {
+        btn.addEventListener("click", () => {
+          const year = btn.dataset.year;
+          const content = document.getElementById(`winners-${year}`);
+          const isExpanded = content.classList.contains("expanded");
+
+          // Close all others
+          document.querySelectorAll(".winners-content").forEach((el) => {
+            el.classList.remove("expanded");
+          });
+          document.querySelectorAll(".year-toggle").forEach((el) => {
+            el.classList.remove("expanded");
+          });
+
+          // Toggle current
+          if (!isExpanded) {
+            content.classList.add("expanded");
+            btn.classList.add("expanded");
+          }
+        });
+      });
+
+      // Open 2025 by default if hash is #2025
+      if (window.location.hash === "#2025") {
+        document.querySelector('[data-year="2025"]').click();
+      }
+    </script>
+  </body>
+</html>
