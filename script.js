@@ -75,3 +75,35 @@ function toggleAnswer(button) {
   plusIcon.classList.toggle("hidden");
   minusIcon.classList.toggle("hidden");
 }
+
+// Countdown Timer
+function toArabicNumerals(num) {
+  return String(num).padStart(2, "0").replace(/\d/g, (d) => "٠١٢٣٤٥٦٧٨٩"[d]);
+}
+
+function updateCountdown() {
+  const targetDate = new Date("2026-04-27T00:00:00");
+  const now = new Date();
+  const diff = targetDate - now;
+
+  if (diff <= 0) {
+    document.getElementById("countdown-days").textContent = "٠٠";
+    document.getElementById("countdown-hours").textContent = "٠٠";
+    document.getElementById("countdown-minutes").textContent = "٠٠";
+    document.getElementById("countdown-seconds").textContent = "٠٠";
+    return;
+  }
+
+  const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+  const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+  const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+
+  document.getElementById("countdown-days").textContent = toArabicNumerals(days);
+  document.getElementById("countdown-hours").textContent = toArabicNumerals(hours);
+  document.getElementById("countdown-minutes").textContent = toArabicNumerals(minutes);
+  document.getElementById("countdown-seconds").textContent = toArabicNumerals(seconds);
+}
+
+updateCountdown();
+setInterval(updateCountdown, 1000);
