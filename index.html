@@ -870,21 +870,22 @@
 
       <!-- INTRO  -->
       <section
-        class="w-full flex flex-col items-center jusctify-center mt-20 md:mt-28 md:mt-24 px-5"
+        class="w-full flex flex-col items-center jusctify-center mt-20 md:mt-24 px-5"
       >
         <div class="w-full relative">
           <h1
             class="text-3xl gradient-text md:text-4xl lg:text-6xl xl:text-7xl black text-center font-medium"
+            style="padding: 8px 0"
           >
             سلام هاك ٢٠٢٦
           </h1>
         </div>
 
         <div
-          class="w-full px-4 bg-[#fafafa] relative py-8 flex flex-col gap-2 items-center justify-around text-center box mt-[190px] md:mt-[250px] lg:mt-[320px]"
+          class="w-full px-4 bg-[#fafafa] relative py-5 flex flex-col gap-2 items-center justify-around text-center box mt-[190px] md:mt-[250px] lg:mt-[320px]"
         >
           <div
-            class="md:px-10 lg:px-20 text-sm text-center flex flex-col gap-3"
+            class="md:px-10 lg:px-20 text-sm text-center flex flex-col gap-1"
           >
             <p class="text-xl md:text-2xl font-[600]">
               موضوع الهاكاثون | Hackathon Theme
@@ -895,25 +896,14 @@
             </p>
           </div>
 
-          <div class="flex mt-10 cursor-not-allowed relative group">
-            <p
-              class="w-full bg-black/30 text-white py-4 px-12 rounded-full font-[400] text-xl pointer-events-none select-none"
-            >
-              سجل الآن
-            </p>
-            <span class="absolute -top-10 left-1/2 -translate-x-1/2 whitespace-nowrap bg-black text-white text-sm px-3 py-1.5 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
-              سجل ابتداء من ١٠ مارس
-            </span>
-          </div>
-
-          <div class="flex items-center gap-2 mt-6 md:mt-10">
+          <div class="flex items-center gap-2 mt-3">
             <img src="icons/date.svg" alt="date" class="w-7" />
             <p class="text-lg font-[600]">٢٧ ابريل إلى ١ مايو</p>
           </div>
 
           <!-- Countdown Timer -->
-          <div class="mt-6 w-full flex justify-center">
-            <div class="bg-white rounded-2xl shadow-sm border border-black/5 px-6 py-5 flex items-center gap-4 md:gap-8">
+          <div class="mt-3 w-full flex justify-center">
+            <div class="bg-white rounded-2xl shadow-sm border border-black/5 px-6 py-4 flex items-center gap-4 md:gap-8">
               <div class="flex flex-col items-center min-w-[50px]">
                 <span id="countdown-days" class="text-4xl md:text-5xl font-bold" style="background: linear-gradient(96deg, #5c5cff -26.7%, #ff2aaa 127.19%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">00</span>
                 <span class="text-xs md:text-sm text-black/50 mt-1 font-medium">أيام</span>
@@ -934,6 +924,17 @@
                 <span class="text-xs md:text-sm text-black/50 mt-1 font-medium">ثوانٍ</span>
               </div>
             </div>
+          </div>
+
+          <div class="flex mt-4 cursor-not-allowed relative group">
+            <p
+              class="w-full bg-black/30 text-white py-4 px-12 rounded-full font-[400] text-xl pointer-events-none select-none"
+            >
+              سجل الآن
+            </p>
+            <span class="absolute -top-10 left-1/2 -translate-x-1/2 whitespace-nowrap bg-black text-white text-sm px-3 py-1.5 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
+              سجل ابتداء من ١٠ مارس
+            </span>
           </div>
         </div>
       </section>
